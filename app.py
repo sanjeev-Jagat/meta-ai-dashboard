@@ -1,4 +1,6 @@
-st.subheader("ROAS Prediction 📊")
+import streamlit as st   # 👈 YE LINE MUST HAI
+
+st.subheader("ROAS Prediction")
 
 headline = st.text_input("Enter Headline")
 text = st.text_area("Enter Ad Text")
