@@ -1,7 +1,4 @@
-# ======================
-# ROAS PREDICTION (REAL)
-# ======================
-st.subheader("📊 ROAS Prediction")
+st.subheader("ROAS Prediction 📊")
 
 headline = st.text_input("Enter Headline")
 text = st.text_area("Enter Ad Text")
