@@ -1,4 +1,29 @@
 import streamlit as st
+
+# Simple user database
+users = {
+    "admin": "1234",
+    "client": "abcd"
+}
+
+if "logged_in" not in st.session_state:
+    st.session_state.logged_in = False
+
+if not st.session_state.logged_in:
+    st.title("🔐 Login Required")
+
+    username = st.text_input("Username")
+    password = st.text_input("Password", type="password")
+
+    if st.button("Login"):
+        if username in users and users[username] == password:
+            st.session_state.logged_in = True
+            st.success("Login successful")
+        else:
+            st.error("Invalid credentials")
+
+    st.stop()
+import streamlit as st
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 
